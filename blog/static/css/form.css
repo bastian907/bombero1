@@ -1,0 +1,58 @@
+body{
+	font-family: arial, helvetica;
+    background: #ff3a3a;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+.menu{
+	list-style: none;
+	padding: 0;
+	background: #092327;
+	width: 100%;
+	max-width: 3000px;
+	margin: auto;
+}
+
+.menu li a{
+	text-decoration: none;
+	color: white;
+	padding: 20px;
+	display: block;
+}
+
+.menu li{
+	display: inline-block;
+	text-align: center;
+}
+
+.menu li a:hover{
+	background: #ef8354;
+}
+
+
+.container{
+	background-color: #ff3a3a;
+	padding: 20px;
+	width: 800px;
+	margin: auto;
+}
+
+.formulario{
+	width: 400px;
+	background-color: aqua;
+	
+	  
+	padding: 20px;
+	border: solid 1px #CCC;
+	margin: auto;
+}
+
+#alert{
+	width: 250px;
+	padding: 5px;
+	background-color: #000;
+	color: red;
+	display: none;
+}
+

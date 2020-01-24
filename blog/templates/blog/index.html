@@ -1,0 +1,93 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Primera Compañia de Bomberos de Quilpue</title>
+	<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+	<link rel="stylesheet" href="css/font-awesome.css">
+
+	<script src="{% static 'js/jquery-3.1.0.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+</head>
+<body>
+	<img width="100" height="100" src="{% static 'img/11026122_659705000802797_7885577479225009824_n.jpg' %}" border="1" alt="Texto Alternativo">
+    <h1>Bomberos</h1>
+
+    <nav class="menu">
+        <li><a href="{% url 'index' %}">Inicio</a></li>
+        <li><a href="{% url 'qsomos' %}">Quienes Somos</a></li>
+        <li><a href="{% url 'fundacion' %}">Fundacion</a></li>
+		<li><a href="{% url 'formulario' %}">Unete a Nosotros</a></li>
+		<li><a href="{% url 'galeria' %}">Galeria</a></li>
+		<li><a href="{% url 'inicio' %}">Inicio Secion</a></li>
+		
+        
+        
+    </nav>
+
+
+
+	<div class="slideshow">
+		<ul class="slider">
+			<li>
+				<img src="{% static 'img/Bomberos.jpg' %}" alt="">
+				<section class="caption">
+					<h1>INSERTE FRASE EPICA DE BOMBERO </h1>
+					<p>inserte otra frase aqui 1</p>
+				</section>
+			</li>
+			<li>
+				<img src="{% static 'img/bombero 2.jpg' %}" alt="">
+				<section class="caption">
+					<h1>INSERTE FRASE EPICA DE BOMBERO</h1>
+					<p>inserte otra frase aqui 2</p>
+				</section>
+			</li>
+			<li>
+				<img src="{% static 'img/bombero 3.jpg' %}" alt="">
+				<section class="caption">
+					<h1>INSERTE FRASE EPICA DE BOMBERO</h1>
+					<p>inserte otra frase aqui 2</p>
+				</section>
+			</li>
+			<li>
+				<img src="{% static 'img/bombero 4.jpg' %}" alt="">
+				<section class="caption">
+					<h1>INSERTE FRASE EPICA DE BOMBERO</h1>
+					<p>inserte otra frase aqui 3</p>
+				</section>
+			</li>
+		</ul>
+
+		<ol class="pagination">
+			
+		</ol>
+	
+		<div class="left">
+			<span class="fa fa-chevron-left"></span>
+		</div>
+
+		<div class="right">
+			<span class="fa fa-chevron-right"></span>
+		</div>
+
+	</div>
+	<hr>
+	{{posts}} <h1>INFORMACION IMPORTANTE</h1>
+	<hr>
+	{% for post in posts %}
+		{{posts}}
+	{% endfor %}
+	<hr>	
+	{% for post in posts %}
+	<div>
+		<p>published: {{ post.published_date }}</p>
+		<h1><a href="">{{ post.title }}</a></h1>
+		<p>{{ post.text|linebreaksbr }}</p>
+	</div>
+{% endfor %}
+</body>
+</html>
+
